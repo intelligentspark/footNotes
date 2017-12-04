@@ -24,7 +24,6 @@ tinymce.PluginManager.add('footnotes', function(editor) {
 
         if (isFootNotes) {
             name = selectedNode.name || $(selectedNode.childNodes[0]).getParent().getAttribute('name') || '';
-            console.log(name);
         }
 
         editor.windowManager.open({
@@ -49,7 +48,6 @@ tinymce.PluginManager.add('footnotes', function(editor) {
                     totalFootNote = editor.getDoc().querySelectorAll('.fnoteWrap'),
                     totalCount = totalFootNote.length,
                     html;
-                console.log(totalFootNote);
 
                 var idx = totalCount + 1;
                 html = replaceTmpl(htmlTemplate,{FOOTNOTE_INDEX : idx});
@@ -57,11 +55,6 @@ tinymce.PluginManager.add('footnotes', function(editor) {
 
                 editor.execCommand('mceInsertContent', false, html);
 
-                // index realignment
-                /*$(editor.id).getChildren('.fnoteBtn').forEach(function(item,idx){
-                    $(item).setProperty('text',(idx+1));
-                    $(item).getParent().setProperty('id','#wk_ft' + (idx +1));
-                });*/
             }
         });
     }
