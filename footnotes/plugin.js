@@ -43,10 +43,10 @@ tinymce.PluginManager.add('footnotes', function(editor) {
                     fixFootnoteContent = (function () {
                         return newfootnoteContent;
                     }()),
-                    htmlTemplate = '<span class="fnoteWrap" id="wk_ft{FOOTNOTE_INDEX}" data-footnote-id="{FOOTNOTE_INDEX}" contenteditable="false">' +
-                        '<a class="fnoteBtn" id="wk_ft{FOOTNOTE_INDEX}" data-footnote-id="{FOOTNOTE_INDEX}">{FOOTNOTE_INDEX}</a>' +
+                    htmlTemplate = '&nbsp;<span class="fnoteWrap" id="wk_ft{FOOTNOTE_INDEX}" data-footnote-id="{FOOTNOTE_INDEX}" contenteditable="false">' +
+                        '<i class="fa fa-sticky-note" aria-hidden="true"></i>' +
                         '<span class="fnoteDesc" style="display:none;">'+fixFootnoteContent+'</span></span>&nbsp;',
-                    totalFootNote = editor.getDoc().querySelectorAll('.fnoteBtn'),
+                    totalFootNote = editor.getDoc().querySelectorAll('.fnoteWrap'),
                     totalCount = totalFootNote.length,
                     html;
                 console.log(totalFootNote);
