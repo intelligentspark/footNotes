@@ -1,4 +1,3 @@
-<script>
 jQuery(document).ready(function() {
     var footnotes = [];
     jQuery("span.fnoteWrap").on('click',function(event) {
@@ -18,4 +17,3 @@ jQuery(document).ready(function() {
 
     });
 });
-</script>
